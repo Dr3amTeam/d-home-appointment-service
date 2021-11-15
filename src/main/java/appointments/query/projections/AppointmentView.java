@@ -21,14 +21,13 @@ public class AppointmentView {
     private String amount;
     @Column(length=60) @Getter @Setter
     private String payMethodId;
-    private Instant createdAt;
     @Column(nullable = true) @Getter @Setter
-    private Instant updatedAt;
+    private String Status;
 
     public AppointmentView() {
     }
 
-    public AppointmentView(String appointmentId, String customerId, String employeeId, String date, String description, String amount, String payMethodId, Instant createdAt) {
+    public AppointmentView(String appointmentId, String customerId, String employeeId, String date, String description, String amount, String payMethodId, String status) {
         this.appointmentId = appointmentId;
         this.customerId = customerId;
         this.employeeId = employeeId;
@@ -36,6 +35,6 @@ public class AppointmentView {
         this.description = description;
         this.amount = amount;
         this.payMethodId = payMethodId;
-        this.createdAt = createdAt;
+        this.Status = status;
     }
 }

@@ -6,15 +6,16 @@ import appointments.command.application.dtos.response.EditAppointmentResponse;
 import appointments.command.application.dtos.response.OpenAppointmentResponse;
 import appointments.command.application.services.AppointmentApplicationService;
 import appointments.command.infra.CustomerDniRepository;
+import appointments.common.api.ApiController;
+import appointments.common.application.Notification;
+import appointments.common.application.Result;
 import io.swagger.annotations.Api;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.modelling.command.AggregateNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import common.application.Notification;
-import common.application.Result;
-import common.api.ApiController;
+
 
 @RestController
 @RequestMapping("/appointments")

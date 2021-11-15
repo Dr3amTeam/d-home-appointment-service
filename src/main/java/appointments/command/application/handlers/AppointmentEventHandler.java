@@ -1,5 +1,8 @@
 package appointments.command.application.handlers;
 
+import appointments.command.domain.Appointment;
+import appointments.contracts.events.AppointmentEdited;
+import appointments.contracts.events.AppointmentRegistered;
 import appointments.query.projections.AppointmentView;
 import appointments.query.projections.AppointmentViewRepository;
 import org.axonframework.eventhandling.EventHandler;

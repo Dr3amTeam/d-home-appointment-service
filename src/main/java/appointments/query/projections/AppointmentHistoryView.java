@@ -7,7 +7,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.time.Instant;
 
 @Entity
 public class AppointmentHistoryView {
@@ -27,14 +26,13 @@ public class AppointmentHistoryView {
     private String amount;
     @Column(length=60) @Getter @Setter
     private String payMethodId;
-    private Instant createdAt;
     @Column(nullable = true) @Getter @Setter
-    private Instant createdAt;
+    private String status;
 
     public AppointmentHistoryView() {
     }
 
-    public AppointmentHistoryView(String appointmentId, String customerId, String employeeId, String date, String description, String amount, String payMethodId, Instant createdAt) {
+    public AppointmentHistoryView(String appointmentId, String customerId, String employeeId, String date, String description, String amount, String payMethodId, String status) {
         this.appointmentId = appointmentId;
         this.customerId = customerId;
         this.employeeId = employeeId;
@@ -42,7 +40,7 @@ public class AppointmentHistoryView {
         this.description = description;
         this.amount = amount;
         this.payMethodId = payMethodId;
-        this.createdAt = createdAt;
+        this.status = status;
     }
     public AppointmentHistoryView(AppointmentHistoryView appointmentHistoryView) {
         this.appointmentId = appointmentHistoryView.getAppointmentId();
@@ -52,7 +50,7 @@ public class AppointmentHistoryView {
         this.description = appointmentHistoryView.getDescription();
         this.amount = appointmentHistoryView.getAmount();
         this.payMethodId = appointmentHistoryView.getPayMethodId();
-        this.createdAt = appointmentHistoryView.getCreatedAt();
+        this.status = appointmentHistoryView.getStatus();
     }
 
 }
